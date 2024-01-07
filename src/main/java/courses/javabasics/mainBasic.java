@@ -1,8 +1,13 @@
 package courses.javabasics;
 
-import java.sql.SQLOutput;
 
-public class Main {
+public class mainBasic {
+
+
+    public static void nume(String name) {
+
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello World");
         final String FINAL_NAME="Ion Popescu";
@@ -112,15 +117,47 @@ public class Main {
 
 
             System.out.println("For Each");
-            int[] number={1,30,50,60,70,3,5,7,9,8};
+            int[] number={1,30,50,60,70,3,5,7,70,9,8};
             int nrPare=0;
+            int max= number[0];
             for(int num: number){
-                if(num%2==0)
+                if(isPar(num))
                     nrPare++;
+
+                max=maxim(max, num);
             }
+
             System.out.println("nrPare " + nrPare);
+            System.out.println("Maximul= " + max);
     }
+
+
     }
+
+
+
+
+ //   public static void modifyName(String newName){
+ //       name=newName;
+  //  }
+
+    public static boolean isPar(int nr){
+        return ((nr % 2) == 0);
+    }
+
+    public static int maxim(int a, int b){
+        if(a<b)
+            return b;
+        else return a;
+    }
+
+
+
+
+
+
+
+
 
 
 
